@@ -12,7 +12,10 @@ const app = express();
 app.use(cors());
 
 //DB connect
-mongoose.connect("mongodb+srv://steffi:steffi@cluster0.npwp5.mongodb.net/BlogAppDatabase?retryWrites=true&w=majority")
+mongoose.connect("mongodb+srv://steffi:steffi@cluster0.npwp5.mongodb.net/BlogAppDatabase?retryWrites=true&w=majority",{
+    useUnifiedTopology: true,
+       useNewUrlParser: true,
+})
 
 //Posting
 app.use(express.urlencoded({extended:true}));
