@@ -156,8 +156,8 @@ app.get('/*',function(req,res){
 
 
 
-var port = process.env.PORT || 5001;
+// var port = process.env.PORT || 5001;
 
-app.listen(port,()=>{
+app.listen(5001,()=>{
     console.log("Server Ready on 5001");
 });
